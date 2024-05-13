@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from 'vue'
 import AssetManage from "./AssetManage.vue"
+import MonitoringCenter from './MonitoringCenter.vue';
 let subChosen=ref(1)
 function switchSubChosen(v){
     subChosen.value=v
@@ -41,6 +42,7 @@ function switchSubChosen(v){
    
   </div>
   <AssetManage v-if="subChosen==2"/>
+  <MonitoringCenter v-if="subChosen==3"/>
 </template>
 
 <style scoped>
