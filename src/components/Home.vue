@@ -8,6 +8,7 @@ function switchSubChosen(v){
 </script>
 
 <template>
+    <div class="all">
     <div id="building">
     </div>
   <div>
@@ -41,9 +42,13 @@ function switchSubChosen(v){
    
   </div>
   <AssetManage v-if="subChosen==2"/>
+  </div>
 </template>
 
 <style scoped>
+.all{
+    overflow: hidden;
+}
 #building{
       background:url("D:\\Downloads\\managementstore.png");
       width:100%;			
