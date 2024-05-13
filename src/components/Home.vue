@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue'
+import AssetManage from "./AssetManage.vue"
 let subChosen=ref(1)
 function switchSubChosen(v){
     subChosen.value=v
@@ -31,15 +32,13 @@ function switchSubChosen(v){
             <img v-if="subChosen==4"  class="subTitleShader" src="/pngs/SubTitleShader.png"/>
         </div>
     </div>
-    <div id="leftPanel">
-        <img class="panelBg" src="/pngs/PanelBG.png"/>
-        <div class="panelContent">
-        </div>
-    </div>
-    <div id="rightPanel">
-        <img class="panelBg" src="/pngs/PanelBG.png"/>
-    </div>
+    <div class="TimeDateBox">
+        <span class="TimeData">14:36</span>
+        <span class="fengef">｜</span>
+        <span class="datedata">2024年5月9日</span></div>
+   
   </div>
+  <AssetManage v-if="subChosen==2"/>
 </template>
 
 <style scoped>
@@ -76,7 +75,7 @@ function switchSubChosen(v){
     position: absolute;
     top:0px;
     height: 6vh;
-    left: 30vw;
+    left: 23vw;
     display: flex;
 }
 .subTitleItemBox{
@@ -93,31 +92,24 @@ function switchSubChosen(v){
     left: 50%;
     top:50%;
     transform: translate(-30%, -20%);
-    font-size: 1。1rem;
+    font-size: 1.1rem;
 }
-#leftPanel{
+
+.TimeDateBox{
     position: absolute;
-    width: 20vw;
-    height: 91vh;
-    top:9vh;
-    left: 0px;
+    top:2vh;
+    right: 5vw;
+    font-size: 1.1rem;
 }
-.panelBg{
-    width: 20vw;
-    height: 90vh;
-    left: 0px;;
+.TimeData{
+    font-weight: Bold;
+    color: #CDD6E3;
 }
-.panelContent{
-    position: absolute;
-    z-index: 10;
-    color: white;
-    top:0vh;
+.fengef{
+    color: #F3D127;
 }
-#rightPanel{
-    position: absolute;
-    width: 20vw;
-    height: 91vh;
-    top:9vh;
-    right: 0px;
+.datedata{
+    color: #CDD6E3;
+    font-size: 0.9rem;
 }
 </style>
