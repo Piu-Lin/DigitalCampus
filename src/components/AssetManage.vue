@@ -4,14 +4,24 @@ import { ref } from 'vue'
 </script>
 
 <template>
-   <div id="leftPanel">
+    <div>
+        
+    </div>
+    <div id="leftPanel">
         <img class="panelBg" src="/pngs/PanelBG.png"/>
         <div class="panelContent">
+            资产管理
+        </div>
+        <div>
+            资产管理111
         </div>
     </div>
                                     
     <div id="rightPanel">
         <img class="panelBg" src="/pngs/PanelBG.png"/>
+        <div class="panelContent">
+            
+        </div>
     </div>
 </template>
 

@@ -8,6 +8,8 @@ function switchSubChosen(v){
 </script>
 
 <template>
+    <div id="building">
+    </div>
   <div>
     <img id="baseBG" src="/pngs/baseBG.png"/>
     <img id="titleBoxBG" src="/pngs/TitleBoxBG.png"/>
@@ -42,6 +44,12 @@ function switchSubChosen(v){
 </template>
 
 <style scoped>
+#building{
+      background:url("D:\\Downloads\\managementstore.png");
+      width:100%;			
+      height:100%;			
+      position:fixed;
+      background-size:100% 100%;}
 #baseBG{
     position: absolute;
     top:0px;
