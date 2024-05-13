@@ -20,7 +20,7 @@ function switchSubChosen(v){
             <img  v-if="subChosen==1"  class="subTitleShader" src="/pngs/SubTitleShader.png"/>
         </div>
         <div @click="switchSubChosen(2)" class="subTitleItemBox" >
-            <span class="subTitleContent">资产管理123</span>
+            <span class="subTitleContent">资产管理</span>
             <img v-if="subChosen==2"  class="subTitleShader" src="/pngs/SubTitleShader.png"/>
         </div>
         <div @click="switchSubChosen(3)" class="subTitleItemBox" >
