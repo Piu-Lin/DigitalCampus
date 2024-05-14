@@ -9,7 +9,7 @@ import {onMounted} from 'vue';
 //import PxyCommonUI from 'pxy_webcommonui';
 
 const sdkid="51dfc5ae3eee4301b86a49515f9c3e92"
-const appid="1238132871332364288"
+const appid="1029062005719302144"
 
 // const { 
 //   Joystick, 
