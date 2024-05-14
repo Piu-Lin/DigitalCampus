@@ -8,7 +8,6 @@ function switchSubChosen(v){
 </script>
 
 <template>
-    <div class="all">
     <div id="building">
     </div>
   <div>
@@ -40,7 +39,6 @@ function switchSubChosen(v){
         <span class="fengef">｜</span>
         <span class="datedata">2024年5月9日</span></div>
    
-  </div>
   </div>
 </template>
 
