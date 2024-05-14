@@ -41,20 +41,10 @@ function switchSubChosen(v){
         <span class="datedata">2024年5月9日</span></div>
    
   </div>
-  <AssetManage v-if="subChosen==2"/>
   </div>
 </template>
 
 <style scoped>
-.all{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left:0px;
-    top: 0px;
-    overflow-x: hidden;
-    overflow-y: hidden;
-}
 #building{
       background:url("D:\\Downloads\\managementstore.png");
       width:100%;			
