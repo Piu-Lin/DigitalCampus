@@ -3,10 +3,7 @@ import { ref } from 'vue'
 
 </script>
 
-<template>
-    <div>
-        
-    </div>
+<template>    
     <div id="leftPanel">
         <img class="panelBg" src="/pngs/PanelBG.png"/>
         <div class="panelContent">

@@ -47,7 +47,13 @@ function switchSubChosen(v){
 
 <style scoped>
 .all{
-    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left:0px;
+    top: 0px;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 #building{
       background:url("D:\\Downloads\\managementstore.png");
