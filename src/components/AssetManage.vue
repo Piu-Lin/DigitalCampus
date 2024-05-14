@@ -6,205 +6,162 @@ import { ref } from 'vue'
 <template>    
     <div id="leftPanel">
         <img class="panelBg" src="/pngs/PanelBG.png"/>
-        <div class="panelContent">
-            <div id="container0">
-                <div class="imgboxyelow box1yelow">资产管理</div>
-            </div>
-            <div id="container1">
-                <div class="imgboxblue box1blue">楼控列表</div>
-            </div>
-            <div id="containerControl">
-                <div class="imgboxControl box1Control"></div>
-            </div>
-            <div id="container2">
-                <div class="imgboxblue0 box1blue0">门禁列表</div>
-            </div>
-            <div id="doorAccess">
-                <div class="imgboxDoor box1Door"></div>
-            </div>
+        <div class="leftTitle">
+            <img id="leftTitleImage" src="/pngs/Management/yellowBack.png"/>
+            <span id="leftTitle1">资产管理</span>
         </div>
+        <div class="securityMonitoring">
+            <img id="smallImage01" src="/pngs/Management/blueBack.png"/>
+            <span id="leftTitle2">楼控列表</span>
+            <img id="img01" src="/pngs/Management/controlList.png">
+        </div>
+
+        <div class="monitoringList">
+            <img id="smallImage01" src="/pngs/Management/blueBack.png"/>
+            <span id="leftTitle2">门禁列表</span>
+            <img id="img02" src="/pngs/Management/doorAccess.png">
+        </div>
+        
     </div>
                                     
     <div id="rightPanel">
         <img class="panelBg" src="/pngs/PanelBG.png"/>
-        <div id="container3">
-            <div class="imgboxblue box1blue">设备列表</div>
+        <div class="fireMonitoring">
+            <img id="smallImage02" src="/pngs/Management/blueBack.png"/>
+            <span id="rightTitle1">设备列表</span>
+            <img id="img03" src="/pngs/Management/devicesOfWrong.png">
+            <img id="img04" src="/pngs/Management/devicesOfTeach.png">
         </div>
-        <div id="Use">
-            <div class="imgboxuse box1use"></div>
-        </div>
-        <div id="dname">
-            <div class="imgboxdname box1dname"></div>
-        </div>
-        <div id="container4">
-            <div class="imgboxblue box1blue">安防列表</div>
-        </div>
-        <div id="last">
-            <div class="imgboxlast box1dlast"></div>
+        <div class="energyMonitoring">
+            <img id="smallImage02" src="/pngs/Management/blueBack.png"/>
+            <span id="rightTitle1">安防列表</span>
+            <img id="img05" src="/pngs/Management/checkList.png">
         </div>
     </div>
 </template>
 
 <style scoped>
-#last .imgboxlast{
-    position: absolute;
-    top: 33vw;
-    left: 0.5vw;
-    height: 21vh;
-    width: 15vw;
-}
-#last .imgboxlast{
-    color: ivory;
-    background-image: url(/pngs/Management/checkList.png);
-    background-size: 15vw 21vh;
-    background-repeat: no-repeat;
-}
-#container4 .imgboxblue{
-    position: absolute;
-    top: 31vw;
-    left: 0.5vw;
-    height:4vh;
-    width: 19vw;
-}
-#container4 .box1blue{
-    font-size: 19px;
-    color: ivory;
-    background-image: url(/pngs/Management/blueBack.png);
-    background-size: 19vw 4vh;
-    background-repeat: no-repeat;
-    text-align: left;
-    padding-top: 0.3vw;
-    padding-left: 1.7vw;
-}
 
-#dname .imgboxdname{
+.energyMonitoring{
     position: absolute;
-    top: 14vw;
-    left: 0.5vw;
-    height: 34vh;
-    width: 19vw;
+    top: 31.7vw;
+    left: 0vw;
 }
-#dname .box1dname{
-    color: ivory;
-    background-image: url(/pngs/Management/devicesOfTeach.png);
-    background-size: 19vw 34vh;
-    background-repeat: no-repeat;
-}
-
-#Use .imgboxuse{
-    position: absolute;
-    top: 2.4vw;
-    left: 0.5vw;
-    height: 23vh;
-    width: 18vw;
-}
-#Use .box1use{
-    color: ivory;
-    background-image: url(/pngs/Management/devicesOfWrong.png);
-    background-size: 18vw 23vh;
-    background-repeat: no-repeat;
-}
-
-#container3 .imgboxblue{
-    position: absolute;
-    top: 0.2vw;
-    left: 0.5vw;
-    height:4vh;
-    width: 19vw;
-}
-#container3 .box1blue{
-    font-size: 19px;
-    color: ivory;
-    background-image: url(/pngs/Management/blueBack.png);
-    background-size: 19vw 4vh;
-    background-repeat: no-repeat;
-    text-align: left;
-    padding-top: 0.3vw;
-    padding-left: 1.7vw;
-}
-#doorAccess .imgboxDoor{
-    position: absolute;
-    top: 27vw;
-    left: 1vw;
-    height: 32vh;
-    width: 17vw;
-}
-#doorAccess .box1Door{
-    font-size: 19px;
-    color: ivory;
-    background-image: url(/pngs/Management/doorAccess.png);
-    background-size: 17vw 32vh;
-    background-repeat: no-repeat;
-    text-align: left;
-}
-#container2 .imgboxblue0{
-    position: absolute;
-    top: 49vh;
-    left: 1vh;
-    height:4vh;
-    width: 19vw;
-}
-#container2 .box1blue0{
-    font-size: 19px;
-    color: ivory;
-    background-image: url(/pngs/Management/blueBack.png);
-    background-size: 19vw 4vh;
-    background-repeat: no-repeat;
-    text-align: left;
-    padding-top: 0.3vw;
-    padding-left: 1.7vw;
-}
-
-#containerControl .imgboxControl{
-    position: absolute;
-    top: 15vh;
-    left: 2vh;
-    height: 33vh;
-    width: 18vw;
-}
-#containerControl .box1Control{
-    font-size: 19px;
-    color: ivory;
-    background-image: url(/pngs/Management/controlList.png);
-    background-size: 18vw 33vh;
-    background-repeat: no-repeat;
-    text-align: left;
-}
-
-#container1 .imgboxblue{
-    position: absolute;
-    top: 10vh;
-    left: 1vh;
-    height:4vh;
-    width: 19vw;
-}
-#container1 .box1blue{
-    font-size: 19px;
-    color: ivory;
-    background-image: url(/pngs/Management/blueBack.png);
-    background-size: 19vw 4vh;
-    background-repeat: no-repeat;
-    text-align: left;
-    padding-top: 0.3vw;
-    padding-left: 1.7vw;
-}
-
-#container0 .imgboxyelow{
+#smallImage02{
     position: absolute;
     top: 1vw;
-    left: 0.5vw;
-    height: 5vh;
-    width: 19vw;
+    left: 1.75vw;
+    width: 16.75vw;
+    height: 2vw;
 }
-#container0 .box1yelow{
-    font-size: 21px;
-    color: ivory;
-    background-image: url(/pngs/Management/yellowBack.png);
-    background-size: 19vw 5vh;
-    background-repeat: no-repeat;
-    text-align: left;
-    padding-top: 0.3vw;
-    padding-left: 1.7vw;
+#rightTitle1{
+    display: flex;  
+    position: absolute;
+    top: 0.2vw;
+    left: 4vw;
+    width: 16vw;
+    height: 3.5vw;
+    color: white;
+    font-weight: bold;
+    font-size:1.75ch;
+    text-align: center;
+    align-items: center;
+}
+#img03{
+    position: absolute;
+    top: 4vw;
+    left: 1vw;
+    width: 18vw;
+}
+#img04{
+    position: absolute;
+    top: 16vw;
+    left: 1vw;
+    width: 18vw;
+}
+#img05{
+    position: absolute;
+    top: 3vw;
+    left: 1vw;
+    width: 18vw;
+    height: 20.5vh;
+}
+.fireMonitoring{
+    position: absolute;
+    top: 0vw;
+    left: 0vw;
+}
+.monitoringList{
+    position: absolute;
+    top: 21vw;
+    left: 0vw;
+}
+#img02{
+    position: absolute;
+    top: 5.5vw;
+    left: 1vw;
+    height: 37vh;
+    width: 18vw;
+}
+#img01{
+    position: absolute;
+    top: 6vw;
+    left: 1vw;
+    width: 18vw;
+}
+.securityMonitoring{
+    position: absolute;
+    top: 0vw;
+    left: 0vw;
+}
+#smallImage01{
+    position: absolute;
+    top: 3.5vw;
+    left: 1.75vw;
+    width: 16.75vw;
+    height: 2vw;
+}
+#leftTitle2{
+    display: flex;  
+    position: absolute;
+    top: 2.7vw;
+    left: 4vw;
+    width: 17vw;
+    height: 3.5vw;
+    color: white;
+    font-weight: bold;
+    font-size:1.75ch;
+    text-align: center;
+    align-items: center;
+}
+.leftTitle{
+    position: absolute;
+    top: 0px;
+    left: 0.75vw;
+    font-weight: bold;
+    text-align: center;
+    align-items: center;
+}
+
+#leftTitleImage{
+    position: absolute;
+    top: 1vw;
+    left: 0.75vw;
+    width: 17vw;
+    height: 3vw;
+}
+#leftTitle1{
+    display: flex;  
+    position: absolute;
+    top: 0.5vw;
+    left: 3vw;
+    width: 17vw;
+    height: 3.5vw;
+    color: white;
+    /* font-weight: bold; */
+    font-size: larger;
+    text-align: center;
+    align-items: center;
 }
 
 #leftPanel{
