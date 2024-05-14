@@ -3,6 +3,7 @@ import { ref } from 'vue'
 import AssetManage from "./AssetManage.vue"
 import MonitoringCenter from './MonitoringCenter.vue';
 import OperationManagement from './OperationManagement.vue';
+import Connectpxy from "./connectpxy.vue"
 let subChosen = ref(1)
 function switchSubChosen(v) {
     subChosen.value = v
@@ -10,6 +11,7 @@ function switchSubChosen(v) {
 </script>
 
 <template>
+    <!-- <Connectpxy/> -->
     <div class="all">
         <div id="building">
         </div>
