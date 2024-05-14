@@ -55,7 +55,7 @@ import { ref } from 'vue'
 }
 #last .imgboxlast{
     color: ivory;
-    background-image: url(/pngs/checkList.png);
+    background-image: url(/pngs/Management/checkList.png);
     background-size: 15vw 21vh;
     background-repeat: no-repeat;
 }
@@ -69,7 +69,7 @@ import { ref } from 'vue'
 #container4 .box1blue{
     font-size: 19px;
     color: ivory;
-    background-image: url(/pngs/blueBack.png);
+    background-image: url(/pngs/Management/blueBack.png);
     background-size: 19vw 4vh;
     background-repeat: no-repeat;
     text-align: left;
@@ -86,7 +86,7 @@ import { ref } from 'vue'
 }
 #dname .box1dname{
     color: ivory;
-    background-image: url(/pngs/devicesOfTeach.png);
+    background-image: url(/pngs/Management/devicesOfTeach.png);
     background-size: 19vw 34vh;
     background-repeat: no-repeat;
 }
@@ -100,7 +100,7 @@ import { ref } from 'vue'
 }
 #Use .box1use{
     color: ivory;
-    background-image: url(/pngs/devicesOfWrong.png);
+    background-image: url(/pngs/Management/devicesOfWrong.png);
     background-size: 18vw 23vh;
     background-repeat: no-repeat;
 }
@@ -115,7 +115,7 @@ import { ref } from 'vue'
 #container3 .box1blue{
     font-size: 19px;
     color: ivory;
-    background-image: url(/pngs/blueBack.png);
+    background-image: url(/pngs/Management/blueBack.png);
     background-size: 19vw 4vh;
     background-repeat: no-repeat;
     text-align: left;
@@ -132,7 +132,7 @@ import { ref } from 'vue'
 #doorAccess .box1Door{
     font-size: 19px;
     color: ivory;
-    background-image: url(/pngs/doorAccess.png);
+    background-image: url(/pngs/Management/doorAccess.png);
     background-size: 17vw 32vh;
     background-repeat: no-repeat;
     text-align: left;
@@ -147,7 +147,7 @@ import { ref } from 'vue'
 #container2 .box1blue0{
     font-size: 19px;
     color: ivory;
-    background-image: url(/pngs/blueBack.png);
+    background-image: url(/pngs/Management/blueBack.png);
     background-size: 19vw 4vh;
     background-repeat: no-repeat;
     text-align: left;
@@ -165,7 +165,7 @@ import { ref } from 'vue'
 #containerControl .box1Control{
     font-size: 19px;
     color: ivory;
-    background-image: url(/pngs/controlList.png);
+    background-image: url(/pngs/Management/controlList.png);
     background-size: 18vw 33vh;
     background-repeat: no-repeat;
     text-align: left;
@@ -181,7 +181,7 @@ import { ref } from 'vue'
 #container1 .box1blue{
     font-size: 19px;
     color: ivory;
-    background-image: url(/pngs/blueBack.png);
+    background-image: url(/pngs/Management/blueBack.png);
     background-size: 19vw 4vh;
     background-repeat: no-repeat;
     text-align: left;
@@ -199,7 +199,7 @@ import { ref } from 'vue'
 #container0 .box1yelow{
     font-size: 21px;
     color: ivory;
-    background-image: url(/pngs/yellowBack.png);
+    background-image: url(/pngs/Management/yellowBack.png);
     background-size: 19vw 5vh;
     background-repeat: no-repeat;
     text-align: left;
