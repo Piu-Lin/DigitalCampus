@@ -38,7 +38,9 @@ function switchSubChosen(v){
         <span class="TimeData">14:36</span>
         <span class="fengef">｜</span>
         <span class="datedata">2024年5月9日</span></div>
-   
+        <AssetManage v-if="subChosen==2"/>
+        <OperationManagement v-if="subChosen==3"/>
+        <MonitoringCenter v-if="subChosen==4"/>
   </div>
 </template>
 
