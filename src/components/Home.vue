@@ -8,20 +8,36 @@ let subChosen = ref(1)
 function switchSubChosen(v) {
     subChosen.value = v
 }
+function getTime(){
+    var currentTime = new Date();
+    var year = currentTime.getFullYear();
+    var month = currentTime.getMonth();
+    var day = currentTime.getDay();
+    var hours = currentTime.getHours();
+    var minutes = currentTime.getMinutes();
+    hours = hours < 10 ? "0" + hours : hours;
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    var dateString = year + "年 " + month + "月 " + day +"日";
+    var timeString = hours + ":" + minutes;
+    document.getElementById("TimeData").innerHTML = dateString;
+    document.getElementById("datedata").innerHTML = timeString;
+}
+// getTime();
+setInterval(getTime,1000);
 </script>
 
 <template>
-    <!-- <Connectpxy/> -->
+    
     <div class="all">
-        <div id="building">
-        </div>
+        <!-- <div id="building">
+        </div> -->
         <div>
+            <!-- <Connectpxy/> -->
             <img id="baseBG" src="/pngs/baseBG.png" />
             <img id="titleBoxBG" src="/pngs/TitleBoxBG.png" />
             <div id="titleContent">之江学院数字孪生校园</div>
             <img id="titleShader" src="/pngs/TitleShader.png" />
             <div id="subTitleBox">
-
                 <div @click="switchSubChosen(1)" class="subTitleItemBox">
                     <span class="subTitleContent">场景展示</span>
                     <img v-if="subChosen == 1" class="subTitleShader" src="/pngs/SubTitleShader.png" />
@@ -40,9 +56,9 @@ function switchSubChosen(v) {
                 </div>
             </div>
             <div class="TimeDateBox">
-                <span class="TimeData">14:36</span>
+                <span id="TimeData"></span>
                 <span class="fengef">｜</span>
-                <span class="datedata">2024年5月9日</span>
+                <span id="datedata"></span>
             </div>
 
         </div>
@@ -50,6 +66,7 @@ function switchSubChosen(v) {
         <OperationManagement v-if="subChosen == 3" />
         <MonitoringCenter v-if="subChosen == 4" />
     </div>
+    
 </template>
 
 <style scoped>
@@ -93,7 +110,7 @@ function switchSubChosen(v) {
     font-family: IQYHT, IQYHT;
     font-weight: bold;
     font-size: 1.5rem;
-
+    color: white;
 }
 
 #titleShader {
@@ -129,6 +146,7 @@ function switchSubChosen(v) {
     top: 50%;
     transform: translate(-30%, -20%);
     font-size: 1.1rem;
+    color: white;
 }
 
 .TimeDateBox {
@@ -136,6 +154,7 @@ function switchSubChosen(v) {
     top: 2vh;
     right: 5vw;
     font-size: 1.1rem;
+    color: white;
 }
 
 .TimeData {
