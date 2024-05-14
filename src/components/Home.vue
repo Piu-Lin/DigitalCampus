@@ -31,9 +31,9 @@ setInterval(getTime,1000);
     <div class="all">
         <!-- <div id="building">
         </div> -->
+        <img id="baseBG" src="/pngs/baseBG.png" />
+        <Connectpxy/>
         <div>
-            <!-- <Connectpxy/> -->
-            <img id="baseBG" src="/pngs/baseBG.png" />
             <img id="titleBoxBG" src="/pngs/TitleBoxBG.png" />
             <div id="titleContent">之江学院数字孪生校园</div>
             <img id="titleShader" src="/pngs/TitleShader.png" />
