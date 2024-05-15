@@ -24,6 +24,17 @@ function getTime(){
 }
 // getTime();
 setInterval(getTime,1000);
+
+let uemeg,meg
+const trigger = (meg) => {
+    console.log(meg)
+    uemeg = JSON.parse(meg)
+    let event_name = uemeg.event_name
+    if(event_name == "scene_display") subChosen.value = 1
+    else if(event_name == "asset_management") subChosen.value = 2
+    else if(event_name == "operation_management") subChosen.value = 3
+    else if(event_name == "monitoring_center") subChosen.value = 4
+}
 </script>
 
 <template>
@@ -32,7 +43,7 @@ setInterval(getTime,1000);
         <!-- <div id="building">
         </div> -->
         <img id="baseBG" src="/pngs/baseBG.png" />
-        <Connectpxy/>
+        <Connectpxy @trigger="trigger" />
         <div>
             <img id="titleBoxBG" src="/pngs/TitleBoxBG.png" />
             <div id="titleContent">之江学院数字孪生校园</div>
