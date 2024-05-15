@@ -30,7 +30,7 @@ onMounted(()=>{
     appliId: appid
   })
   larksr.on('datachanneltext',(e)=>{
-    console.log(e.data)
+    //console.log(e)
     emit("trigger",e.data)
   })
   window.larksr=larksr
