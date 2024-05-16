@@ -7,7 +7,7 @@ import Connectpxy from "./connectpxy.vue"
 let subChosen = ref(1)
 let shouldShowVideo=ref(false)
 let shouldShowButton=ref(false)
-let videoSource=ref('https://media.w3.org/2010/05/sintel/trailer.mp4') // 视频文件的路径
+let videoSource=ref('/videos/video.mp4') // 视频文件的路径
 function switchSubChosen(v) {
     subChosen.value = v
 }
@@ -61,19 +61,11 @@ function toggleVideoDisplay() {
         <Connectpxy @trigger="trigger" />
         
         <div class = "videomasks">
-            <!-- 视频元素，通过v-if控制显示 -->
             <video v-if="shouldShowVideo" controls autoplay width = 100% height = "100%">
             <source :src="videoSource" type="video/mp4">
-            您的浏览器不支持视频播放。
             </video>
-            <!-- 控制显示视频的按钮 -->
             <button v-if="shouldShowButton" @click="toggleVideoDisplay()">{{ "隐藏视频" }}</button>
         </div>
-<!-- 
-        <div class="videomasks" v-if="showVideo" id="app">
-            <button @click="showVideo = !showVideo">切换视频显示</button>
-            <video src="https://media.w3.org/2010/05/sintel/trailer.mp4" controls="controls" autoplay width="100%" height="100%"></video>
-        </div> -->
 
         <div>
             <img id="titleBoxBG" src="/pngs/TitleBoxBG.png" />
@@ -117,13 +109,17 @@ function toggleVideoDisplay() {
   max-width: 120vw;
   position: absolute;
   right: 25vw;
-  left: 25.vw;
+  left: 25vw;
   top: 80vh;
   margin-top: -30%;
   z-index: 20;
   /* transform: translate(-50%, -50%); */
 }
-
+.videomasks video{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
 .all {
     position: absolute;
     width: 100%;
