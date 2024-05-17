@@ -29,12 +29,10 @@ onMounted(()=>{
   larksr.connectWithPxyHost ({
     appliId: appid
   })
-  larksr.on('datachannelopen', (e) => {
-    let timer=setTimeout(()=>{
-      emit("trigger",'{"eventname": "Event_Connected","data":" Event_Connected"}')
-    },3000)
-    
-  });
+  larksr.on('datachanneltext',(e)=>{
+    //console.log(e)
+    emit("trigger",e.data)
+  })
   window.larksr=larksr
 })
 </script>

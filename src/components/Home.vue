@@ -5,33 +5,68 @@ import MonitoringCenter from './MonitoringCenter.vue';
 import OperationManagement from './OperationManagement.vue';
 import Connectpxy from "./connectpxy.vue"
 let subChosen = ref(1)
+let shouldShowVideo=ref(false)
+let shouldShowButton=ref(false)
+let videoSource=ref('/videos/video.mp4') // 视频文件的路径
 function switchSubChosen(v) {
     subChosen.value = v
 }
 function getTime(){
     var currentTime = new Date();
     var year = currentTime.getFullYear();
-    var month = currentTime.getMonth() + 1;
-    var day = currentTime.getDate();
+    var month = currentTime.getMonth();
+    var day = currentTime.getDay();
     var hours = currentTime.getHours();
     var minutes = currentTime.getMinutes();
     hours = hours < 10 ? "0" + hours : hours;
     minutes = minutes < 10 ? "0" + minutes : minutes;
-    var dateString = year + "年" + month + "月" + day +"日";
+    var dateString = year + "年 " + month + "月 " + day +"日";
     var timeString = hours + ":" + minutes;
     document.getElementById("TimeData").innerHTML = dateString;
     document.getElementById("datedata").innerHTML = timeString;
 }
-setInterval(getTime,100);
+// getTime();
+setInterval(getTime,1000);
+let event_name
+let uemeg, meg
+const trigger = (meg) => {
+    console.log(meg)
+    uemeg = JSON.parse(meg)
+    let keys = Object.keys(uemeg)
+    if(keys == "event_name"){
+        event_name = uemeg.event_name
+        if(event_name == "scene_display") subChosen.value = 1
+        else if(event_name == "asset_management") subChosen.value = 2
+        else if(event_name == "operation_management") subChosen.value = 3
+        else if(event_name == "monitoring_center") subChosen.value = 4
+    }
+    else {
+        shouldShowVideo.value = true
+        shouldShowButton.value = true
+        //videoSource.value = 'https://upos-hz-mirrorks3u.acgvideo.com/upgcxcode/90/65/122426590/122426590-1-6.mp4?e=ig8euxZM2rNcNbuVhwdVtWuVhwdVNEVEuCIv29hEn0l5QK==&uipk=5&nbs=1&deadline=1570938144&gen=playurl&os=ks3u&oi=3742040479&trid=06d1dfd471d34b8eb40c4cee6c79531ah&platform=html5&upsig=904b08c9cd9418a8acfd4384c8b05a30&uparams=e,uipk,nbs,deadline,gen,os,oi,trid,platform&mid=0'
+    }//else if(event_name == "")
+}
+
+function toggleVideoDisplay() {
+    shouldShowVideo.value = false // 切换视频显示状态
+    shouldShowButton.value = false
+}
 </script>
 
 <template>
-    
     <div class="all">
         <!-- <div id="building">
         </div> -->
         <img id="baseBG" src="/pngs/baseBG.png" />
-        <Connectpxy/>
+        <Connectpxy @trigger="trigger" />
+        
+        <div class = "videomasks">
+            <video v-if="shouldShowVideo" controls autoplay width = 100% height = "100%">
+            <source :src="videoSource" type="video/mp4">
+            </video>
+            <button v-if="shouldShowButton" @click="toggleVideoDisplay()">{{ "隐藏视频" }}</button>
+        </div>
+
         <div>
             <img id="titleBoxBG" src="/pngs/TitleBoxBG.png" />
             <div id="titleContent">之江学院数字孪生校园</div>
@@ -69,6 +104,22 @@ setInterval(getTime,100);
 </template>
 
 <style scoped>
+
+.videomasks {
+  max-width: 120vw;
+  position: absolute;
+  right: 25vw;
+  left: 25vw;
+  top: 80vh;
+  margin-top: -30%;
+  z-index: 20;
+  /* transform: translate(-50%, -50%); */
+}
+.videomasks video{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
 .all {
     position: absolute;
     width: 100%;
