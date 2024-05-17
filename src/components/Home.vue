@@ -14,13 +14,13 @@ function switchSubChosen(v) {
 function getTime(){
     var currentTime = new Date();
     var year = currentTime.getFullYear();
-    var month = currentTime.getMonth();
-    var day = currentTime.getDay();
+    var month = currentTime.getMonth() + 1;
+    var day = currentTime.getDate();
     var hours = currentTime.getHours();
     var minutes = currentTime.getMinutes();
     hours = hours < 10 ? "0" + hours : hours;
     minutes = minutes < 10 ? "0" + minutes : minutes;
-    var dateString = year + "年 " + month + "月 " + day +"日";
+    var dateString = year + "年" + month + "月" + day +"日";
     var timeString = hours + ":" + minutes;
     document.getElementById("TimeData").innerHTML = dateString;
     document.getElementById("datedata").innerHTML = timeString;
@@ -51,6 +51,7 @@ function toggleVideoDisplay() {
     shouldShowVideo.value = false // 切换视频显示状态
     shouldShowButton.value = false
 }
+setInterval(getTime,100);
 </script>
 
 <template>
