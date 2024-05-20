@@ -59,13 +59,13 @@ function toggleVideoDisplay() {
         <!-- <div id="building">
         </div> -->
         <img id="baseBG" src="/pngs/baseBG.png" />
-        <!-- <Connectpxy @trigger="trigger" /> -->
+        <Connectpxy @trigger="trigger" />
         
         <div class = "videomasks">
             <video v-if="shouldShowVideo" controls autoplay width = 100% height = "100%">
             <source :src="videoSource" type="video/mp4">
             </video>
-            <button v-if="shouldShowButton" @click="toggleVideoDisplay()">{{ "隐藏视频" }}</button>
+            <button v-if="shouldShowButton" @click="toggleVideoDisplay()">{{ "关闭视频" }}</button>
         </div>
 
         <div>
