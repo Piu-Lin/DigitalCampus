@@ -33,6 +33,7 @@ const trigger = (meg) => {
     console.log(meg)
     uemeg = JSON.parse(meg)
     let keys = Object.keys(uemeg)
+    console.log(keys)
     if(keys == "event_name"){
         event_name = uemeg.event_name
         if(event_name == "scene_display") subChosen.value = 1
@@ -40,7 +41,7 @@ const trigger = (meg) => {
         else if(event_name == "operation_management") subChosen.value = 3
         else if(event_name == "monitoring_center") subChosen.value = 4
     }
-    else {
+    else if(keys == "安防"){
         shouldShowVideo.value = true
         shouldShowButton.value = true
         //videoSource.value = 'https://upos-hz-mirrorks3u.acgvideo.com/upgcxcode/90/65/122426590/122426590-1-6.mp4?e=ig8euxZM2rNcNbuVhwdVtWuVhwdVNEVEuCIv29hEn0l5QK==&uipk=5&nbs=1&deadline=1570938144&gen=playurl&os=ks3u&oi=3742040479&trid=06d1dfd471d34b8eb40c4cee6c79531ah&platform=html5&upsig=904b08c9cd9418a8acfd4384c8b05a30&uparams=e,uipk,nbs,deadline,gen,os,oi,trid,platform&mid=0'
@@ -58,7 +59,7 @@ function toggleVideoDisplay() {
         <!-- <div id="building">
         </div> -->
         <img id="baseBG" src="/pngs/baseBG.png" />
-        <Connectpxy @trigger="trigger" />
+        <!-- <Connectpxy @trigger="trigger" /> -->
         
         <div class = "videomasks">
             <video v-if="shouldShowVideo" controls autoplay width = 100% height = "100%">
